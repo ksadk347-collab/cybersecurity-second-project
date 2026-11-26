@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Cybersecurity Department</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="logo">Cybersecurity Department</p>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Send us a message or visit the department office.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container contact-grid">
+        <div>
+          <h2>Send a Message</h2>
+          <!-- no JavaScript, so this form does not really send data -->
+          <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <div>
+          <h2>Department Information</h2>
+          <!-- sample details, replace with the real ones -->
+          <address>
+            Cybersecurity Department<br>
+            Suez Canal University<br>
+            Ismailia, Egypt<br>
+            Email: cybersecurity@example.com<br>
+            Phone: +20 000 000 0000
+          </address>
+          <p>Office hours: Sunday to Thursday, 9:00 AM to 3:00 PM.</p>
+
+          <h2>Location</h2>
+          <div class="location-box">
+            <p>The department is in the Faculty building, second floor, room 205. Look for the signs near the main entrance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cybersecurity Department. Student project for Web Design and Development.</p>
+    </div>
+  </footer>
+</body>
+</html>

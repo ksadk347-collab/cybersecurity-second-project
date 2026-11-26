@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs - Cybersecurity Department</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="logo">Cybersecurity Department</p>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html" class="active">Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>Our Programs</h1>
+        <p>The department offers four main program areas. Each one has lectures and practical labs.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Photo Gallery</h2>
+        <!-- srcset gives the browser two image sizes; sizes tells it how wide the image will be -->
+        <div class="gallery">
+          <figure>
+            <img src="images/network-400.jpg"
+                 srcset="images/network-400.jpg 400w, images/network-800.jpg 800w"
+                 sizes="(min-width: 64rem) 25vw, (min-width: 40rem) 50vw, 100vw"
+                 width="800" height="600"
+                 alt="Network cables connected to a switch">
+            <figcaption>Network equipment</figcaption>
+          </figure>
+          <figure>
+            <img src="images/padlock-400.jpg"
+                 srcset="images/padlock-400.jpg 400w, images/padlock-800.jpg 800w"
+                 sizes="(min-width: 64rem) 25vw, (min-width: 40rem) 50vw, 100vw"
+                 width="800" height="600"
+                 alt="A padlock on top of a laptop keyboard">
+            <figcaption>Protecting data</figcaption>
+          </figure>
+          <figure>
+            <img src="images/server-400.jpg"
+                 srcset="images/server-400.jpg 400w, images/server-800.jpg 800w"
+                 sizes="(min-width: 64rem) 25vw, (min-width: 40rem) 50vw, 100vw"
+                 width="800" height="600"
+                 alt="Rows of servers in a data center">
+            <figcaption>Server room</figcaption>
+          </figure>
+          <figure>
+            <img src="images/code-400.jpg"
+                 srcset="images/code-400.jpg 400w, images/code-800.jpg 800w"
+                 sizes="(min-width: 64rem) 25vw, (min-width: 40rem) 50vw, 100vw"
+                 width="800" height="600"
+                 alt="Program code shown on a computer screen">
+            <figcaption>Security code review</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Educational Video</h2>
+        <div class="video-box">
+          <!-- TODO: replace VIDEO_ID_HERE with the ID of a cybersecurity video you choose from YouTube -->
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+                  title="Cybersecurity educational video"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Program Areas</h2>
+        <div class="card-grid programs-grid">
+          <article class="card">
+            <h3>Network Security</h3>
+            <p>Learn how to protect computer networks using firewalls, VPNs and monitoring tools.</p>
+          </article>
+          <article class="card">
+            <h3>Ethical Hacking</h3>
+            <p>Learn how to find weaknesses in systems legally so they can be fixed before attackers use them.</p>
+          </article>
+          <article class="card">
+            <h3>Digital Forensics</h3>
+            <p>Learn how to collect and study digital evidence after a security incident.</p>
+          </article>
+          <article class="card">
+            <h3>Cryptography</h3>
+            <p>Learn how encryption and hashing keep information private and safe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cybersecurity Department. Student project for Web Design and Development.</p>
+    </div>
+  </footer>
+</body>
+</html>

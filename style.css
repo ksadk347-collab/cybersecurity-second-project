@@ -1,0 +1,303 @@
+/* style.css - shared by index.html, programs.html and contact.html */
+
+/* 1. Variables: change a color or size here and it changes everywhere */
+:root {
+  /* colors */
+  --dark-blue: #0b2545;
+  --mid-blue: #13508a;
+  --light-blue: #dceaf7;
+  --white: #ffffff;
+  --gray-bg: #f2f4f7;
+  --gray-border: #c9ced6;
+  --text-color: #2b2f36;
+
+  /* fonts */
+  --font-main: Arial, Helvetica, sans-serif;
+
+  /* type scale: base 1rem, ratio 1.25 (each step = previous x 1.25) */
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.563rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+
+  /* spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+}
+
+/* 2. Basic reset and page setup */
+* {
+  box-sizing: border-box; /* padding and border stay inside the width */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--gray-bg);
+}
+
+img {
+  max-width: 100%; /* images never get wider than their box */
+  height: auto;
+}
+
+/* clamp(smallest, preferred, biggest) makes headings scale with the screen */
+h1 {
+  font-size: clamp(var(--text-lg), 5vw, var(--text-2xl));
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(var(--text-md), 4vw, var(--text-xl));
+  color: var(--dark-blue);
+}
+
+h3 {
+  font-size: var(--text-md);
+  color: var(--dark-blue);
+}
+
+a {
+  color: var(--mid-blue);
+}
+
+/* 3. Keyboard focus: shows an outline when you press Tab */
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0.2rem solid var(--mid-blue);
+  outline-offset: 0.2rem;
+}
+
+/* 4. Layout helpers */
+.container {
+  max-width: 70rem; /* a maximum, not a fixed width */
+  margin: 0 auto;   /* centers the box */
+  padding: 0 var(--space-2);
+}
+
+section {
+  padding: var(--space-4) 0;
+}
+
+/* 5. Header and navigation (Flexbox) */
+.site-header {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: var(--space-2) 0;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;        /* items go to the next line on small screens */
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logo {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  padding: var(--space-1);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+  background-color: var(--mid-blue);
+}
+
+.site-header a:focus {
+  outline-color: var(--light-blue); /* light outline so it shows on dark blue */
+}
+
+/* 6. Hero (welcome) section */
+.hero {
+  background-color: var(--mid-blue);
+  color: var(--white);
+  padding: var(--space-5) 0;
+}
+
+.hero p {
+  max-width: 40rem;
+}
+
+/* 7. Cards (Grid) */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* one column on phones */
+  gap: var(--space-3);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-border);
+  border-top: 0.3rem solid var(--mid-blue);
+  padding: var(--space-3);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* 8. Timetable */
+.table-wrap {
+  overflow-x: auto; /* table scrolls sideways on small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+}
+
+th,
+td {
+  border: 1px solid var(--gray-border);
+  padding: var(--space-1);
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+th {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+/* 9. Gallery and video */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+}
+
+.gallery figure {
+  margin: 0;
+  background-color: var(--white);
+  border: 1px solid var(--gray-border);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+}
+
+.gallery figcaption {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-sm);
+}
+
+.video-box {
+  aspect-ratio: 16 / 9; /* keeps the video in a 16:9 shape at any width */
+  width: 100%;
+  max-width: 50rem;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 10. Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+form label {
+  display: block;
+  margin-top: var(--space-2);
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: var(--space-1);
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+  border: 1px solid var(--gray-border);
+}
+
+form button {
+  margin-top: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-base);
+  color: var(--white);
+  background-color: var(--mid-blue);
+  border: none;
+  cursor: pointer;
+}
+
+.location-box {
+  background-color: var(--light-blue);
+  border: 1px solid var(--gray-border);
+  padding: var(--space-3);
+}
+
+/* 11. Footer */
+.site-footer {
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+  text-align: center;
+  padding: var(--space-3) 0;
+  font-size: var(--text-sm);
+}
+
+/* 12. Responsive breakpoints (only 3), mobile first */
+@media (min-width: 40rem) { /* about 640px: tablets */
+  .card-grid,
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) { /* about 1024px: laptops and desktops */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 90rem) { /* about 1440px: big screens */
+  body {
+    font-size: var(--text-md);
+  }
+}
